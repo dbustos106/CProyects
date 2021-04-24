@@ -24,15 +24,14 @@ struct sockaddr_in {
 struct in_addr {
     unsigned long s_addr;  // load with inet_aton()
 };
- 
 */
+
 int main(){
  
     int serverfd, clientfd, r, opt = 1;
     struct sockaddr_in server, client;
     socklen_t tamano;
  
-        
     serverfd = socket(AF_INET, SOCK_STREAM, 0);
     if(serverfd < 0){
         perror("\n-->Error en socket():");
