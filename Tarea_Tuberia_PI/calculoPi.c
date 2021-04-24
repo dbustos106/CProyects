@@ -24,7 +24,7 @@ int main(){
         double sec;
 
         for(int i = 0; i < 10000; i++){
-            sec = sec + 1/(i*4.0+1.0);
+            sec = sec + 1/(i*4.0 + 1.0);
         }
 
         bufer = &sec;
@@ -42,7 +42,7 @@ int main(){
         r = read(pipefd[0], pi2, 10);
         pi2[r] = 0;
         close(pipefd[0]);
-        printf("\nPI = %f \n", (pi1 + *pi2)*4);
+        printf("PI = %f \n", (pi1 + *pi2)*4);
     }
     return 0;
 }
