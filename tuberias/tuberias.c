@@ -21,7 +21,7 @@ int main(){
     }
     if(pid == 0){
         close(pipefd[0]);
-        write(pipefd[1], "hola mundo", 10);
+        r = write(pipefd[1], "hola mundo\n", 10);
         close(pipefd[1]);
         exit(0);
     }else{
